@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class UsuarioService {
 
   baseUrl = "https://localhost:44345";
-  token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cGVyQWRtaW4iLCJyb2xlIjoiQWRtaW5pc3RyYWRvciIsIm5iZiI6MTYzNzIzNjc3NiwiZXhwIjoxNjM3MjQzOTc2LCJpYXQiOjE2MzcyMzY3NzZ9.jnJINNJGbv_HFdAJu6BUJlWCyE0BG32VGSS8Q4juStc";
+  token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cGVyQWRtaW4iLCJyb2xlIjoiQWRtaW5pc3RyYWRvciIsIm5iZiI6MTYzNzI1MzAzNiwiZXhwIjoxNjM3MjYwMjM2LCJpYXQiOjE2MzcyNTMwMzZ9.-18MzFGmQdPF5Ba5iK69FXlJXDNK7GLH9ytlvX-GBZs";
   
   httpHeader = {
     headers: new HttpHeaders({

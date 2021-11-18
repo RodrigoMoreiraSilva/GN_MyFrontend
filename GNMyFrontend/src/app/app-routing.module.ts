@@ -6,6 +6,8 @@ import { RegrasComponent } from "./components/Gestao/regras/regras.component";
 import { HomeComponent } from "./components/home/home.component";
 import { UsuariosCadastroComponent } from './components/Gestao/usuarios-cadastro/usuarios-cadastro.component';
 import { UsuariosUpdateComponent } from './components/Gestao/usuarios-update/usuarios-update.component';
+import { RegrasCadastroComponent } from './components/Gestao/regras-cadastro/regras-cadastro.component';
+import { RegrasUpdateComponent } from './components/Gestao/regras-update/regras-update.component';
 
 const routes: Routes = [
   {
@@ -27,6 +29,14 @@ const routes: Routes = [
   {
     path: "usuarios/editar/:id",
     component: UsuariosUpdateComponent
+  },
+  {
+    path: "regras/cadastro",
+    component: RegrasCadastroComponent
+  },
+  {
+    path: "regras/editar/:id",
+    component: RegrasUpdateComponent
   }
 ];
 

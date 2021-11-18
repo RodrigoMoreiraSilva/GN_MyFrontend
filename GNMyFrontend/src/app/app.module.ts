@@ -27,7 +27,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTableModule } from '@angular/material/table';
-import { UsuariosUpdateComponent } from './components/Gestao/usuarios-update/usuarios-update.component'
+import { UsuariosUpdateComponent } from './components/Gestao/usuarios-update/usuarios-update.component';
+import { RegrasCadastroComponent } from './components/Gestao/regras-cadastro/regras-cadastro.component';
+import { RegrasUpdateComponent } from './components/Gestao/regras-update/regras-update.component'
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { UsuariosUpdateComponent } from './components/Gestao/usuarios-update/usu
     RegrasComponent,
     HomeComponent,
     UsuariosCadastroComponent,
-    UsuariosUpdateComponent
+    UsuariosUpdateComponent,
+    RegrasCadastroComponent,
+    RegrasUpdateComponent
   ],
   imports: [
     BrowserModule,

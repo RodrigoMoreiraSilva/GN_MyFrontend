@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-title>Editar Regra</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="regra.name" name="name">
+        </mat-form-field>
+        <mat-checkbox color="primary" [(ngModel)]="regra.isActive" name="isActive">
+            Ativo
+        </mat-checkbox>        
+    </form>
+    <button mat-raised-button (click)="AlterarRegra()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="Cancel()">
+        Cancelar
+    </button>
+</mat-card>
