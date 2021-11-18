@@ -30,6 +30,7 @@ import { MatTableModule } from '@angular/material/table';
 import { UsuariosUpdateComponent } from './components/Gestao/usuarios-update/usuarios-update.component';
 import { RegrasCadastroComponent } from './components/Gestao/regras-cadastro/regras-cadastro.component';
 import { RegrasUpdateComponent } from './components/Gestao/regras-update/regras-update.component'
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { RegrasUpdateComponent } from './components/Gestao/regras-update/regras-
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

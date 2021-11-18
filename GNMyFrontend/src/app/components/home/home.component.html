@@ -8,7 +8,13 @@
             <input matInput placeholder="Password" type="password" [(ngModel)]="usuario.password" name="password">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Domínio" [(ngModel)]="usuario.ldapSection" name="ldapSection">
+            <mat-label>Selecione um domínio</mat-label>
+            <mat-select [(value)]="usuario.ldapSection">
+                <mat-option>None</mat-option>
+                <mat-option value="LdapGestoInterno">GESTO Equipes</mat-option>
+                <mat-option value="LdapGestoExterno">GESTO Clientes</mat-option>
+                <mat-option value="LdapItechcare">ITECHCARE</mat-option>
+            </mat-select>
         </mat-form-field>        
     </form>
     <button mat-raised-button (click)="Login()" color="primary">
