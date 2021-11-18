@@ -1,12 +1,13 @@
 export interface Usuario {
     id?: number
-    userName?: string
+    userName: string
     password?: string
     role?: string
     passwordExpired?: boolean
     activeDirectoryAuth?: boolean
     numTentativasAcesso?: number
     ldapSection?: string
+    token?: string
     dataInclusao?: Date
     idUserInclusao?: number
     dataAlteracao?: Date

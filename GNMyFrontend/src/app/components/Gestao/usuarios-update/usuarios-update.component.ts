@@ -10,7 +10,7 @@ import { Usuario } from 'src/app/models/usuario.model';
 })
 export class UsuariosUpdateComponent implements OnInit {
 
-  usuario: Usuario = {};
+  usuario: Usuario = { userName: ''};
 
   constructor(private router: Router, private route: ActivatedRoute, private usuarioService: UsuarioService) { }
 

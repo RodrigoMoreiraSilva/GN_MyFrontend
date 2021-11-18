@@ -1,3 +1,4 @@
+import { LoginTokenService } from 'src/app/Services/login-token.service';
 import { Usuario } from './../models/usuario.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Injectable } from '@angular/core';
@@ -10,16 +11,18 @@ import { Observable } from 'rxjs';
 export class UsuarioService {
 
   baseUrl = "https://localhost:44345";
-  token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlN1cGVyQWRtaW4iLCJyb2xlIjoiQWRtaW5pc3RyYWRvciIsIm5iZiI6MTYzNzI1MzAzNiwiZXhwIjoxNjM3MjYwMjM2LCJpYXQiOjE2MzcyNTMwMzZ9.-18MzFGmQdPF5Ba5iK69FXlJXDNK7GLH9ytlvX-GBZs";
-  
+  token = JSON.parse(localStorage.getItem('usuarioAtual')!);
+    
   httpHeader = {
     headers: new HttpHeaders({
       'Authorization': 'Bearer ' + this.token
     })
   };
    
-  constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
-
+  constructor(private snackBar: MatSnackBar, private http: HttpClient, private tokenService: LoginTokenService) {
+    this.token = localStorage.getItem('usuarioAtual')?? '';
+   }
+  
   ExibirMensagem(msg: string): void {
     this.snackBar.open(msg,'x', {
       duration: 3000,
@@ -33,6 +36,7 @@ export class UsuarioService {
   }
 
   Read(): Observable<Usuario[]> {
+    this.token =  this.tokenService.RecuperarToken();
     return this.http.get<Usuario[]>(this.baseUrl + "/api/Users/FindAll", this.httpHeader);
   }
 

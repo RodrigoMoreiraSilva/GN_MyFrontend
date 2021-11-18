@@ -1,1 +1,20 @@
-<p>home works!</p>
+<mat-card>
+    <mat-card-title>Acessar o Gestão Única</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Username" [(ngModel)]="usuario.userName" name="userName">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Password" type="password" [(ngModel)]="usuario.password" name="password">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Domínio" [(ngModel)]="usuario.ldapSection" name="ldapSection">
+        </mat-form-field>        
+    </form>
+    <button mat-raised-button (click)="Login()" color="primary">
+        Entrar
+    </button>
+    <div><br>
+       Token: <br> {{usuario.token}}
+    </div>
+</mat-card>

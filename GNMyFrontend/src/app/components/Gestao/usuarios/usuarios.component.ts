@@ -24,7 +24,6 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
     this.usuarioService.Read().subscribe(x => {
       this.usuarios = x;
-      console.log(this.usuarios);
     })
   }
 

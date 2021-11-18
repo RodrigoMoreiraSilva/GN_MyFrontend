@@ -10,7 +10,7 @@ import { Usuario } from 'src/app/models/usuario.model';
 })
 export class UsuariosCadastroComponent implements OnInit {
   
-  usuario: Usuario = {};
+  usuario: Usuario = { userName: ''};
 
   constructor(private usuarioService: UsuarioService, private router: Router) {   }
 
