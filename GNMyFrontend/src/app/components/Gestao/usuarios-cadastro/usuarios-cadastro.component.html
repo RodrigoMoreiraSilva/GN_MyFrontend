@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-title>Novo Usuário</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Username" [(ngModel)]="usuario.userName" name="userName">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Password" type="password" [(ngModel)]="usuario.password" name="password">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Role" [(ngModel)]="usuario.role" name="role">
+        </mat-form-field>
+        <mat-checkbox color="primary" [(ngModel)]="usuario.isActive" name="isactive">
+            Ativo
+        </mat-checkbox>
+        <mat-checkbox color="primary" [(ngModel)]="usuario.activeDirectoryAuth" name="activeDirectoryAuth">
+            Autenticação AD
+        </mat-checkbox>
+        <mat-checkbox color="primary" [(ngModel)]="usuario.passwordExpired" name="passwordExpired">
+            Senha Expirada
+        </mat-checkbox>
+        
+    </form>
+    <button mat-raised-button (click)="CriarUsuario()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="Cancel()">
+        Cancelar
+    </button>
+</mat-card>
