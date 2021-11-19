@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario.model';
 import { LoginTokenService } from 'src/app/Services/login-token.service';
 
@@ -9,12 +10,13 @@ import { LoginTokenService } from 'src/app/Services/login-token.service';
 })
 export class HomeComponent implements OnInit {
 
-  usuario: Usuario = { userName: ''};
-  private tokenKey:string = 'app_token';
-
-  constructor(private loginTokenService: LoginTokenService) { }
+  usuario: Usuario = { userName: '',
+  token: JSON.parse(localStorage.getItem('usuarioAtual')!)};
+ 
+  constructor(private loginTokenService: LoginTokenService, private router: Router) { }
 
   ngOnInit(): void {
+
   }
 
   Login(): void {
@@ -22,6 +24,21 @@ export class HomeComponent implements OnInit {
       localStorage.setItem('usuarioAtual', JSON.stringify(x.token))
       )
     this.usuario.token = JSON.parse(localStorage.getItem('usuarioAtual')!);
+
+    if(this.usuario.token != null){
+      this.loginTokenService.ExibirMensagem("Bem vindo, "+ this.usuario.userName +"!")
+      this.router.navigate(['/'])
+    }
+    else
+    this.loginTokenService.ExibirMensagem("Opss... "+ this.usuario.userName + ", parece que algo deu errado, tente novamente...")
+  }
+
+  Logout(): void {
+    localStorage.removeItem('usuarioAtual');
+    this.usuario.token = '';
+    this.loginTokenService.ExibirMensagem("Até breve!")
+    this.router.navigate(['/'])
+    location.reload()
   }
 
   

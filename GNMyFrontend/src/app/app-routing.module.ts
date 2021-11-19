@@ -8,6 +8,9 @@ import { UsuariosCadastroComponent } from './components/Gestao/usuarios-cadastro
 import { UsuariosUpdateComponent } from './components/Gestao/usuarios-update/usuarios-update.component';
 import { RegrasCadastroComponent } from './components/Gestao/regras-cadastro/regras-cadastro.component';
 import { RegrasUpdateComponent } from './components/Gestao/regras-update/regras-update.component';
+import { LoginComponent } from './components/login/login.component';
+import { ActiveDirectoryComponent } from './components/Gestao/active-directory/active-directory.component';
+import { ActiveDirectoryCadastroComponent } from './components/Gestao/active-directory-cadastro/active-directory-cadastro.component';
 
 const routes: Routes = [
   {
@@ -37,6 +40,18 @@ const routes: Routes = [
   {
     path: "regras/editar/:id",
     component: RegrasUpdateComponent
+  },
+  {
+    path: "login",
+    component: LoginComponent
+  },
+  {
+    path: "activedirectory",
+    component: ActiveDirectoryComponent
+  },
+  {
+    path: "activedirectory/cadastro",
+    component: ActiveDirectoryCadastroComponent
   }
 ];
 

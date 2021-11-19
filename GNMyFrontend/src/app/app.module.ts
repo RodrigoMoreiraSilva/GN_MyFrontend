@@ -31,6 +31,9 @@ import { UsuariosUpdateComponent } from './components/Gestao/usuarios-update/usu
 import { RegrasCadastroComponent } from './components/Gestao/regras-cadastro/regras-cadastro.component';
 import { RegrasUpdateComponent } from './components/Gestao/regras-update/regras-update.component'
 import { MatSelectModule } from '@angular/material/select';
+import { LoginComponent } from './components/login/login.component';
+import { ActiveDirectoryComponent } from './components/Gestao/active-directory/active-directory.component';
+import { ActiveDirectoryCadastroComponent } from './components/Gestao/active-directory-cadastro/active-directory-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import { MatSelectModule } from '@angular/material/select';
     UsuariosCadastroComponent,
     UsuariosUpdateComponent,
     RegrasCadastroComponent,
-    RegrasUpdateComponent
+    RegrasUpdateComponent,
+    LoginComponent,
+    ActiveDirectoryComponent,
+    ActiveDirectoryCadastroComponent
   ],
   imports: [
     BrowserModule,

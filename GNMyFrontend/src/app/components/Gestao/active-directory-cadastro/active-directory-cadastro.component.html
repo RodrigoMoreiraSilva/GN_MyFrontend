@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>Novo Domínio</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="activeDirectory.name" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Valor" [(ngModel)]="activeDirectory.ldapValue" name="ldapValue">
+        </mat-form-field>
+        <mat-checkbox color="primary" [(ngModel)]="activeDirectory.isActive" name="isactive">
+            Ativo
+        </mat-checkbox>        
+    </form>
+    <button mat-raised-button (click)="CriarActiveDirectory()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="Cancel()">
+        Cancelar
+    </button>
+</mat-card>

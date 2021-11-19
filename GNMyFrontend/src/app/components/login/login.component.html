@@ -1,5 +1,5 @@
 <mat-card>
-  <!--  <mat-card-title>Acessar o Gestão Única</mat-card-title>
+    <mat-card-title>Acessar o Gestão Única</mat-card-title>
     <form>
         <mat-form-field>
             <input matInput placeholder="Username" [(ngModel)]="usuario.userName" name="userName">
@@ -8,23 +8,18 @@
             <input matInput placeholder="Password" type="password" [(ngModel)]="usuario.password" name="password">
         </mat-form-field>
         <mat-form-field>
-            <mat-label>Selecione um domínio</mat-label>
+            <mat-label>Selecione um domínio ou deixe em branco para autenticação local</mat-label>
             <mat-select [(value)]="usuario.ldapSection">
-                <mat-option>None</mat-option>
-                <mat-option value="LdapGestoInterno">GESTO Equipes</mat-option>
-                <mat-option value="LdapGestoExterno">GESTO Clientes</mat-option>
-                <mat-option value="LdapItechcare">ITECHCARE</mat-option>
+                <mat-option *ngFor="let dominio of activeDirectoryList" [value]="dominio.ldapValue">
+                    {{dominio.name}}
+                </mat-option>
             </mat-select>
         </mat-form-field>        
     </form>
     <button mat-raised-button (click)="Login()" color="primary">
-        Refresh Token
+        Entrar
     </button>
-    -->
     <button mat-raised-button (click)="Logout()" color="primary">
         Sair
     </button>
-    <div><br>
-       Token: <br> {{usuario.token}}
-    </div>
 </mat-card>

@@ -1,0 +1,14 @@
+.activedirectory .title {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.activedirectory .subtitle {
+    font-size: 0.9rem;
+}
+
+table {
+    margin: 25px 15px 0px 0px;
+    width: 100%;
+}
