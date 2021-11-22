@@ -27,19 +27,12 @@ export class LoginComponent implements OnInit {
     this.loginTokenService.GerarToken(this.usuario).subscribe(x =>
       localStorage.setItem('usuarioAtual', JSON.stringify(x.token))
       )
-    //this.usuario.token = JSON.parse(localStorage.getItem('usuarioAtual')!);
-
+  
     if(JSON.parse(localStorage.getItem('usuarioAtual')!) != null){
-      //this.loginTokenService.ExibirMensagem("Bem vindo, "+ this.usuario.userName +"!")
+      localStorage.setItem('usernameAtual',JSON.stringify(this.usuario.userName))
       location.reload()
     }
     else
       this.loginTokenService.ExibirMensagem("Opss... "+ this.usuario.userName + ", parece que algo deu errado, tente novamente...")
   }
-
-  Logout(): void {
-    localStorage.removeItem('usuarioAtual');
-    location.reload()
-  }
-
 }

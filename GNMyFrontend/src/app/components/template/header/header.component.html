@@ -6,10 +6,21 @@
     </span>
     <span class="title-group">
         <a>
+            Gestão Única &nbsp; 
             <i class="material-icons">
-                home
+                build
             </i>
-            Gestão Única
+            Configurações Gerais
         </a>
     </span>
+    <div class="user">
+        <span>
+            Olá, {{usuario}}
+        </span>
+        <span>
+            <button mat-raised-button (click)="Logout()" color="primary">
+                Sair
+            </button>
+        </span>
+    </div>
 </mat-toolbar>

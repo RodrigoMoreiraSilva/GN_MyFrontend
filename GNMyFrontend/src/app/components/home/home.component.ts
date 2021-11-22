@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
 
   Logout(): void {
     localStorage.removeItem('usuarioAtual');
+    localStorage.removeItem('usernameAtual');
     this.usuario.token = '';
     this.loginTokenService.ExibirMensagem("Até breve!")
     this.router.navigate(['/'])

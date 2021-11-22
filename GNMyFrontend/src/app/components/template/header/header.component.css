@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    font-size: smaller;
 }
 
 .header .logo {
@@ -21,3 +22,11 @@
 .header .title-group i {
     padding-right: 5px;
 }
+
+.header .user {
+    font-size: small;
+    text-align: end;
+    width: 70%;
+}
+
+

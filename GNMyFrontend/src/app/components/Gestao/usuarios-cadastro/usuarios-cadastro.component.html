@@ -8,7 +8,12 @@
             <input matInput placeholder="Password" type="password" [(ngModel)]="usuario.password" name="password">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Role" [(ngModel)]="usuario.role" name="role">
+            <mat-label>Role</mat-label>
+            <mat-select [(value)]="usuario.role">
+                <mat-option *ngFor="let role of roles" [value]="role.name">
+                    {{role.name}}
+                </mat-option>
+            </mat-select>
         </mat-form-field>
         <mat-checkbox color="primary" [(ngModel)]="usuario.isActive" name="isactive">
             Ativo
