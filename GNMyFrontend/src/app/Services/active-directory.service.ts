@@ -32,8 +32,16 @@ export class ActiveDirectoryService {
     return this.http.get<ActiveDirectory[]>(this.baseUrl + "/api/ActiveDirectoryDomain", this.httpHeader)
   }
 
+  ReadById(id: string): Observable<ActiveDirectory> {
+    return this.http.get<ActiveDirectory>(this.baseUrl + "/api/ActiveDirectoryDomain/" + id, this.httpHeader)
+  }
+
   Create(ad: ActiveDirectory): Observable<ActiveDirectory> {
     return this.http.post<ActiveDirectory>(this.baseUrl + "/api/ActiveDirectoryDomain", ad, this.httpHeader)
+  }
+
+  Update(ad: ActiveDirectory): Observable<ActiveDirectory> {
+    return this.http.put<ActiveDirectory>(this.baseUrl + "/api/ActiveDirectoryDomain/" + ad.id, ad, this.httpHeader)
   }
 
 }

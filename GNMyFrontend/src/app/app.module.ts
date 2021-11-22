@@ -34,6 +34,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { LoginComponent } from './components/login/login.component';
 import { ActiveDirectoryComponent } from './components/Gestao/active-directory/active-directory.component';
 import { ActiveDirectoryCadastroComponent } from './components/Gestao/active-directory-cadastro/active-directory-cadastro.component';
+import { ActiveDirectoryUpdateComponent } from './components/Gestao/active-directory-update/active-directory-update.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ActiveDirectoryCadastroComponent } from './components/Gestao/active-dir
     RegrasUpdateComponent,
     LoginComponent,
     ActiveDirectoryComponent,
-    ActiveDirectoryCadastroComponent
+    ActiveDirectoryCadastroComponent,
+    ActiveDirectoryUpdateComponent
   ],
   imports: [
     BrowserModule,

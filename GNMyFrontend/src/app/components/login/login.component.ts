@@ -14,12 +14,12 @@ export class LoginComponent implements OnInit {
 
   usuario: Usuario = { userName: ''};
   activeDirectoryList: ActiveDirectory[] = [];
- 
+  
   constructor(private loginTokenService: LoginTokenService, private activeDirectoryService: ActiveDirectoryService) { }
 
   ngOnInit(): void {
     this.activeDirectoryService.Read().subscribe(x =>
-      this.activeDirectoryList = x
+      this.activeDirectoryList = x.filter(ad => ad.isActive == true)     
       )
   }
 

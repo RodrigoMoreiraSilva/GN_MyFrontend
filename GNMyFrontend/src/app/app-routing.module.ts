@@ -11,6 +11,7 @@ import { RegrasUpdateComponent } from './components/Gestao/regras-update/regras-
 import { LoginComponent } from './components/login/login.component';
 import { ActiveDirectoryComponent } from './components/Gestao/active-directory/active-directory.component';
 import { ActiveDirectoryCadastroComponent } from './components/Gestao/active-directory-cadastro/active-directory-cadastro.component';
+import { ActiveDirectoryUpdateComponent } from './components/Gestao/active-directory-update/active-directory-update.component';
 
 const routes: Routes = [
   {
@@ -52,6 +53,10 @@ const routes: Routes = [
   {
     path: "activedirectory/cadastro",
     component: ActiveDirectoryCadastroComponent
+  },
+  {
+    path: "activedirectory/editar/:id",
+    component: ActiveDirectoryUpdateComponent
   }
 ];
 

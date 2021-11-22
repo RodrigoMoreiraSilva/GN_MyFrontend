@@ -13,6 +13,7 @@ export class ActiveDirectoryComponent implements OnInit {
   activeDirectoryList: ActiveDirectory[] = [];
   displayedColumns = ['id'
                     ,'name'
+                    ,'ldapValue'
                     ,'isActive'
                     ,'Edidar'];
 

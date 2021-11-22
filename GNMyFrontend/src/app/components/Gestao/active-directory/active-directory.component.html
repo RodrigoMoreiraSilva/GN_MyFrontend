@@ -22,6 +22,11 @@
                  <th mat-header-cell *matHeaderCellDef>Nome</th>
                  <td mat-cell *matCellDef="let row">{{ row.name }}</td>
              </ng-container>
+
+             <ng-container matColumnDef="ldapValue">
+                <th mat-header-cell *matHeaderCellDef>Valor</th>
+                <td mat-cell *matCellDef="let row">{{ row.ldapValue }}</td>
+            </ng-container>
                
              <ng-container matColumnDef="isActive">
                  <th mat-header-cell *matHeaderCellDef>Ativo</th>
@@ -31,7 +36,7 @@
              <ng-container matColumnDef="Edidar">
                  <th mat-header-cell *matHeaderCellDef>Editar</th>
                  <td mat-cell *matCellDef="let row">
-                     <a routerLink="/regras/editar/{{ row.id }}">
+                     <a routerLink="/activedirectory/editar/{{ row.id }}">
                          <i class="material-icons">
                              edit
                          </i>
