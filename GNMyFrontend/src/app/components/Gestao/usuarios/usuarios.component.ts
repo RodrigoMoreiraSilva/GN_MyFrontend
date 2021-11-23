@@ -37,6 +37,8 @@ export class UsuariosComponent implements AfterViewInit, OnInit {
      this.usuarios.data = x;
     });
     this.paginatorLabel.itemsPerPageLabel = 'Itens por página:';
+    this.paginatorLabel.nextPageLabel = 'Próximo';
+    this.paginatorLabel.previousPageLabel = 'Anterior';
   }
 
   NavigateToCadastro(): void {
