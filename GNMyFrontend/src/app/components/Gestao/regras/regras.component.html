@@ -42,5 +42,10 @@
              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
          </table>
+         <mat-paginator [length]="regras.data.length"
+              [pageSize]="5"
+              [pageSizeOptions]="[5, 10, 25, 50, 100]"
+              aria-label="Select page">
+        </mat-paginator>
      </div>
  </mat-card>

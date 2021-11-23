@@ -3,6 +3,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario.model';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator'
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-usuarios',
@@ -11,7 +12,8 @@ import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator'
 })
 export class UsuariosComponent implements AfterViewInit, OnInit {
 
-  usuarios: Usuario[] = [];
+  usuarios = new MatTableDataSource<Usuario>([]);
+
   displayedColumns = ['id'
                     ,'userName'
                     ,'role'
@@ -20,19 +22,21 @@ export class UsuariosComponent implements AfterViewInit, OnInit {
                     ,'passwordExpired'
                     ,'Edidar'];
   
+  @ViewChild(MatPaginator) private paginator: MatPaginator;
+
   constructor( private router: Router
     , private usuarioService: UsuarioService
     , private paginatorLabel: MatPaginatorIntl) { }
-    
+
   ngAfterViewInit(): void {
-    throw new Error('Method not implemented.');
+    this.usuarios.paginator = this.paginator;
   }
 
   ngOnInit(): void {
     this.usuarioService.Read().subscribe(x => {
-      this.usuarios = x;
-    })
-    this.paginatorLabel.itemsPerPageLabel = 'Itens por página:'
+     this.usuarios.data = x;
+    });
+    this.paginatorLabel.itemsPerPageLabel = 'Itens por página:';
   }
 
   NavigateToCadastro(): void {
