@@ -42,10 +42,10 @@ const routes: Routes = [
     path: "regras/editar/:id",
     component: RegrasUpdateComponent
   },
-  {
-    path: "login",
-    component: LoginComponent
-  },
+  //{
+  //  path: "login",
+  //  component: LoginComponent
+  //},
   {
     path: "activedirectory",
     component: ActiveDirectoryComponent

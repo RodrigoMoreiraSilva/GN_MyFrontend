@@ -3,6 +3,27 @@ form {
     flex-direction: column;
 }
 
-button {
-    margin: 25px 15px 0px 0px;
+.tittle {
+    text-align: center;
+    color: darkblue;
+    margin: 0px 0px 15px 0px;
 }
+
+button {
+    margin: 0px 0px 0px 0px;
+}
+
+.login {
+    width: 35vh;
+}
+
+.main-div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("src\assets\img\backgroundLogin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 50%
+  }

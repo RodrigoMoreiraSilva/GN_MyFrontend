@@ -20,8 +20,8 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('usuarioAtual');
     localStorage.removeItem('usernameAtual');
     this.loginTokenService.ExibirMensagem("Até breve!")
-    this.router.navigate(['/login'])
     location.reload()
+    this.router.navigate(['/login'])
   }
 
 }

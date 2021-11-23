@@ -10,17 +10,19 @@
             <i class="material-icons">
                 build
             </i>
-            Configurações Gerais
+            Gerenciador
         </a>
     </span>
     <div class="user">
         <span>
             Olá, {{usuario}}
         </span>
+    </div>
+    <div class="sairClick">
         <span>
-            <button mat-raised-button (click)="Logout()" color="primary">
-                Sair
-            </button>
+            <a href="" role="button" (click)="Logout()" color="primary">
+                <strong>Sair</strong>
+            </a>
         </span>
     </div>
 </mat-toolbar>

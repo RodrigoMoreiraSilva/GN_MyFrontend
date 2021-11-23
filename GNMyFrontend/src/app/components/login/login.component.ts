@@ -23,16 +23,19 @@ export class LoginComponent implements OnInit {
       )
   }
 
-  Login(): void {
-    this.loginTokenService.GerarToken(this.usuario).subscribe(x =>
-      localStorage.setItem('usuarioAtual', JSON.stringify(x.token))
-      )
-  
-    if(JSON.parse(localStorage.getItem('usuarioAtual')!) != null){
-      localStorage.setItem('usernameAtual',JSON.stringify(this.usuario.userName))
-      location.reload()
-    }
-    else
-      this.loginTokenService.ExibirMensagem("Opss... "+ this.usuario.userName + ", parece que algo deu errado, tente novamente...")
+  Login(): void 
+  {
+    this.loginTokenService.GerarToken(this.usuario).subscribe(x => {
+        if(x != null)
+        {
+          localStorage.setItem('usuarioAtual', JSON.stringify(x.token))
+          localStorage.setItem('usernameAtual',JSON.stringify(this.usuario.userName))
+          location.reload()
+        }
+        else
+        {
+          this.loginTokenService.ExibirMensagem("Opss... "+ this.usuario.userName + ", parece que algo deu errado, tente novamente...")
+        }
+      });        
   }
 }

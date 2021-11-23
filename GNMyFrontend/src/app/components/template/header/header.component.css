@@ -29,4 +29,10 @@
     width: 70%;
 }
 
+.header .sairClick {
+    margin-left: 10px;
+    font-size: smaller;
+    color: blue;
+}
+
 

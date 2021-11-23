@@ -35,6 +35,8 @@ import { LoginComponent } from './components/login/login.component';
 import { ActiveDirectoryComponent } from './components/Gestao/active-directory/active-directory.component';
 import { ActiveDirectoryCadastroComponent } from './components/Gestao/active-directory-cadastro/active-directory-cadastro.component';
 import { ActiveDirectoryUpdateComponent } from './components/Gestao/active-directory-update/active-directory-update.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 
 @NgModule({
   declarations: [
@@ -70,7 +72,9 @@ import { ActiveDirectoryUpdateComponent } from './components/Gestao/active-direc
     MatInputModule,
     MatCheckboxModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

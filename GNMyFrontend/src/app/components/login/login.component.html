@@ -1,22 +1,24 @@
-<mat-card>
-    <mat-card-title>Acessar o Gestão Única</mat-card-title>
-    <form>
-        <mat-form-field>
-            <input matInput placeholder="Username" [(ngModel)]="usuario.userName" name="userName">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Password" type="password" [(ngModel)]="usuario.password" name="password">
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Selecione um domínio ou deixe em branco para autenticação local</mat-label>
-            <mat-select [(value)]="usuario.ldapSection">
-                <mat-option *ngFor="let dominio of activeDirectoryList" [value]="dominio.ldapValue">
-                    {{dominio.name}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>        
-    </form>
-    <button mat-raised-button (click)="Login()" color="primary">
-        Entrar
-    </button>
-</mat-card>
+<div class="main-div">
+    <mat-card class="login mat-elevation-z4">
+        <mat-card-title class="tittle">Gestão Única  Gerenciador</mat-card-title>
+        <form>
+            <mat-form-field>
+                <input matInput placeholder="Username" [(ngModel)]="usuario.userName" name="userName">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Password" type="password" [(ngModel)]="usuario.password" name="password">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Domínio</mat-label>
+                <mat-select [(value)]="usuario.ldapSection">
+                    <mat-option *ngFor="let dominio of activeDirectoryList" [value]="dominio.ldapValue">
+                        {{dominio.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>        
+        </form>
+        <button mat-raised-button (click)="Login()" color="primary">
+            Entrar
+        </button>
+    </mat-card>
+</div>
