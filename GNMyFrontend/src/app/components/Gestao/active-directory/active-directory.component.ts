@@ -20,7 +20,7 @@ export class ActiveDirectoryComponent implements AfterViewInit, OnInit {
                     ,'isActive'
                     ,'Edidar'];
 
-  @ViewChild(MatPaginator) private paginator: MatPaginator;
+  @ViewChild(MatPaginator) private paginator!: MatPaginator;
 
   constructor(private activeDirectoryService: ActiveDirectoryService, private router: Router) { }
   ngAfterViewInit(): void {
