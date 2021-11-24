@@ -3,10 +3,10 @@
         <mat-card-title class="tittle">Gestão Única  Gerenciador</mat-card-title>
         <form>
             <mat-form-field>
-                <input matInput placeholder="Username" [(ngModel)]="usuario.userName" name="userName">
+                <input matInput placeholder="Username" [(ngModel)]="usuario.userName" name="userName" (keyup.enter)=Login() >
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Password" type="password" [(ngModel)]="usuario.password" name="password">
+                <input matInput placeholder="Password" type="password" [(ngModel)]="usuario.password" name="password" (keyup.enter)=Login()>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Domínio</mat-label>

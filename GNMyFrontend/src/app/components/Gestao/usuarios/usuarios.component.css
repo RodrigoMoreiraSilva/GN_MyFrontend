@@ -8,6 +8,19 @@
     font-size: 0.9rem;
 }
 
+ .mat-raised-button {
+  margin: 0px 100px 0px 0px;
+}
+
+input {
+    padding-left:0.4em;
+    padding-top:0.4em;
+    padding-bottom:0.4em;
+    padding-right: 0.4em;
+    width: 500px;
+    height: 10px;
+}
+
 table {
     margin: 25px 15px 0px 0px;
     width: 100%;

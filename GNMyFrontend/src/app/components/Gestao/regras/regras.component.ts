@@ -16,6 +16,7 @@ export class RegrasComponent implements AfterViewInit, OnInit {
 
   displayedColumns = ['id'
                     ,'name'
+                    ,'observacao'
                     ,'isActive'
                     ,'Edidar'];
 

@@ -4,6 +4,9 @@
         <mat-form-field>
             <input matInput placeholder="Nome" [(ngModel)]="regra.name" name="name">
         </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [(ngModel)]="regra.observacao" name="observacao">
+        </mat-form-field>
         <mat-checkbox color="primary" [(ngModel)]="regra.isActive" name="isActive">
             Ativo
         </mat-checkbox>        

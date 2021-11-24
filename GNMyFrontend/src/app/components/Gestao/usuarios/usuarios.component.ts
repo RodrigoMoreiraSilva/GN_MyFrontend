@@ -13,6 +13,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class UsuariosComponent implements AfterViewInit, OnInit {
 
   usuarios = new MatTableDataSource<Usuario>([]);
+  bkp_data = new MatTableDataSource<Usuario>([]);
 
   displayedColumns = ['id'
                     ,'userName'
@@ -35,11 +36,19 @@ export class UsuariosComponent implements AfterViewInit, OnInit {
   ngOnInit(): void {
     this.usuarioService.Read().subscribe(x => {
      this.usuarios.data = x;
+     this.bkp_data.data = x;
     });
     this.paginatorLabel.itemsPerPageLabel = 'Itens por página:';
+    this.paginatorLabel.nextPageLabel = 'Próximo';
+    this.paginatorLabel.previousPageLabel = 'Anterior';
   }
 
   NavigateToCadastro(): void {
     this.router.navigate(['/usuarios/cadastro'])
+  }
+
+  Pesquisar(evento: KeyboardEvent){
+    this.usuarios.data = this.bkp_data.data
+    this.usuarios.data = this.usuarios.data.filter(x => x.userName.includes((<HTMLInputElement>evento.target).value))
   }
 }
