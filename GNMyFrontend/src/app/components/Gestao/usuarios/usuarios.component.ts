@@ -50,6 +50,6 @@ export class UsuariosComponent implements AfterViewInit, OnInit {
 
   Pesquisar(evento: KeyboardEvent){
     this.usuarios.data = this.bkp_data.data
-    this.usuarios.data = this.usuarios.data.filter(x => x.userName.toLowerCase().includes((<HTMLInputElement>evento.target).value))
+    this.usuarios.data = this.usuarios.data.filter(x => x.userName.toLowerCase().includes((<HTMLInputElement>evento.target).value.toLowerCase()))
   }
 }
