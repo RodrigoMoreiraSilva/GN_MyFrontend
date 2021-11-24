@@ -16,6 +16,7 @@ export class ActiveDirectoryComponent implements AfterViewInit, OnInit {
   displayedColumns = ['id'
                     ,'name'
                     ,'ldapValue'
+                    ,'observacao'
                     ,'isActive'
                     ,'Edidar'];
 

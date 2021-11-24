@@ -3,7 +3,8 @@
          Gestão de Domínios do Active Directory
      </mat-card-title>
      <mat-card-subtitle class="subtitle">
-         Área de gestão dos domínios de autenticação pelo AD do sistema Gestão Única.
+         <p>Área de gestão dos domínios de autenticação pelo AD do sistema Gestão Única.<br>
+         <strong class="alert">Importante:</strong> O campo <strong>Valor</strong> deve ser o mesmo contido no arquivo <strong>appsettings.json</strong> do sistema <strong>API-Active-Directory</strong></p>
      </mat-card-subtitle>
  
      <button mat-raised-button (click)="NavigateToCadastro()" color="primary">
@@ -26,6 +27,11 @@
              <ng-container matColumnDef="ldapValue">
                 <th mat-header-cell *matHeaderCellDef>Valor</th>
                 <td mat-cell *matCellDef="let row">{{ row.ldapValue }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="observacao">
+                <th mat-header-cell *matHeaderCellDef>Observação</th>
+                <td mat-cell *matCellDef="let row">{{ row.observacao }}</td>
             </ng-container>
                
              <ng-container matColumnDef="isActive">
