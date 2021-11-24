@@ -38,6 +38,9 @@ import { ActiveDirectoryUpdateComponent } from './components/Gestao/active-direc
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 
+import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +77,11 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
     MatTableModule,
     MatSelectModule,
     MatPaginatorModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    CommonModule,
+    ToastrModule.forRoot({
+      positionClass :'toast-bottom-right'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
