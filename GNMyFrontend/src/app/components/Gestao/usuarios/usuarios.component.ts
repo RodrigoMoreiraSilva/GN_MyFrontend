@@ -18,6 +18,7 @@ export class UsuariosComponent implements AfterViewInit, OnInit {
   displayedColumns = ['id'
                     ,'userName'
                     ,'role'
+                    ,'observacao'
                     ,'isActive'
                     ,'activeDirectoryAuth'
                     ,'passwordExpired'
