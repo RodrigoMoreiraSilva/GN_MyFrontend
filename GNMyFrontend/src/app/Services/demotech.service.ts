@@ -32,6 +32,10 @@ export class DemotechService {
     return this.http.get<DemotechServico[]>(this.baseUrl + "/api/Demotech_Servico", this.httpHeader)
   }
 
+  ReadById(id: string): Observable<DemotechServico> {
+    return this.http.get<DemotechServico>(this.baseUrl + "/api/Demotech_Servico/" + id, this.httpHeader)
+  }
+
   uploadFileDemotech(file: File, demotech_Servico: DemotechServico): Observable<any>{
     const formData = new FormData();
 
@@ -39,6 +43,15 @@ export class DemotechService {
     formData.append('demotech_Servico', JSON.stringify(demotech_Servico));
 
     return this.http.post(this.baseUrl + "/api/Demotech_Servico", formData, this.httpHeader);
+  }
+
+  updateFileDemotech(file: File, demotech_Servico: DemotechServico): Observable<any>{
+    const formData = new FormData();
+
+    formData.append('file', file, file.name);
+    formData.append('demotech_Servico', JSON.stringify(demotech_Servico));
+
+    return this.http.put(this.baseUrl + "/api/Demotech_Servico/" + demotech_Servico.id, formData, this.httpHeader);
   }
 
 }

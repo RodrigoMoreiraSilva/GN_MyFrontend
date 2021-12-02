@@ -15,6 +15,7 @@ import { ActiveDirectoryUpdateComponent } from './components/Gestao/active-direc
 import { UploadFileComponent } from './components/upload-file/upload-file.component';
 import { DemotechServicosComponent } from './components/Gestao/demotech-servicos/demotech-servicos.component';
 import { DemotechServicosCadastroComponent } from './components/Gestao/demotech-servicos-cadastro/demotech-servicos-cadastro.component';
+import { DemotechServicosUpdateComponent } from './components/Gestao/demotech-servicos-update/demotech-servicos-update.component';
 
 
 const routes: Routes = [
@@ -73,6 +74,10 @@ const routes: Routes = [
   {
     path: "demotech_servicos/cadastro",
     component: DemotechServicosCadastroComponent
+  },
+  {
+    path: "demotech_servicos/editar/:id",
+    component: DemotechServicosUpdateComponent
   }
 ];
 

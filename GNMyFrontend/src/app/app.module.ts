@@ -39,6 +39,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { DemotechServicosComponent } from './components/Gestao/demotech-servicos/demotech-servicos.component';
 import { DemotechServicosCadastroComponent } from './components/Gestao/demotech-servicos-cadastro/demotech-servicos-cadastro.component';
+import { DemotechServicosUpdateComponent } from './components/Gestao/demotech-servicos-update/demotech-servicos-update.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { DemotechServicosCadastroComponent } from './components/Gestao/demotech-
     ActiveDirectoryCadastroComponent,
     ActiveDirectoryUpdateComponent,
     DemotechServicosComponent,
-    DemotechServicosCadastroComponent
+    DemotechServicosCadastroComponent,
+    DemotechServicosUpdateComponent
   ],
   imports: [
     BrowserModule,
