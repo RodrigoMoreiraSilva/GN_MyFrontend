@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ActiveDirectoryComponent } from './components/Gestao/active-directory/active-directory.component';
 import { ActiveDirectoryCadastroComponent } from './components/Gestao/active-directory-cadastro/active-directory-cadastro.component';
 import { ActiveDirectoryUpdateComponent } from './components/Gestao/active-directory-update/active-directory-update.component';
+import { UploadFileComponent } from './components/upload-file/upload-file.component';
 
 const routes: Routes = [
   {
@@ -57,6 +58,10 @@ const routes: Routes = [
   {
     path: "activedirectory/editar/:id",
     component: ActiveDirectoryUpdateComponent
+  },
+  {
+    path: "uploadfile",
+    component: UploadFileComponent
   }
 ];
 
