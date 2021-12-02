@@ -13,6 +13,9 @@ import { ActiveDirectoryComponent } from './components/Gestao/active-directory/a
 import { ActiveDirectoryCadastroComponent } from './components/Gestao/active-directory-cadastro/active-directory-cadastro.component';
 import { ActiveDirectoryUpdateComponent } from './components/Gestao/active-directory-update/active-directory-update.component';
 import { UploadFileComponent } from './components/upload-file/upload-file.component';
+import { DemotechServicosComponent } from './components/Gestao/demotech-servicos/demotech-servicos.component';
+import { DemotechServicosCadastroComponent } from './components/Gestao/demotech-servicos-cadastro/demotech-servicos-cadastro.component';
+
 
 const routes: Routes = [
   {
@@ -62,6 +65,14 @@ const routes: Routes = [
   {
     path: "uploadfile",
     component: UploadFileComponent
+  },
+  {
+    path: "demotech_servicos",
+    component: DemotechServicosComponent
+  },
+  {
+    path: "demotech_servicos/cadastro",
+    component: DemotechServicosCadastroComponent
   }
 ];
 

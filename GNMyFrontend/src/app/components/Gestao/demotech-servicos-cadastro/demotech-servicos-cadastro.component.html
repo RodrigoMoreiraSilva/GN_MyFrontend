@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-title>Novo Serviço Demotech</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Tipo" [(ngModel)]="demotechServico.tipoServico" name="tipoServico">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Categoria" [(ngModel)]="demotechServico.categoria" name="categoria">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [(ngModel)]="demotechServico.descricao" name="descricao">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Observação" [(ngModel)]="demotechServico.observacao" name="observacao">
+        </mat-form-field>
+        <mat-checkbox color="primary" [(ngModel)]="demotechServico.isActive" name="isactive">
+            Ativo
+        </mat-checkbox>        
+    </form>
+    <div class="inputFile">
+        <input type="file" (change)="inputFileChange($event)">
+    </div>
+    <button mat-raised-button (click)="CriarDemotechServico()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="Cancel()">
+        Cancelar
+    </button>
+</mat-card>
+

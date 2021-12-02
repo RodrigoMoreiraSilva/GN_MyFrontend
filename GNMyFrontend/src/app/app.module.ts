@@ -36,7 +36,9 @@ import { ActiveDirectoryComponent } from './components/Gestao/active-directory/a
 import { ActiveDirectoryCadastroComponent } from './components/Gestao/active-directory-cadastro/active-directory-cadastro.component';
 import { ActiveDirectoryUpdateComponent } from './components/Gestao/active-directory-update/active-directory-update.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { DemotechServicosComponent } from './components/Gestao/demotech-servicos/demotech-servicos.component';
+import { DemotechServicosCadastroComponent } from './components/Gestao/demotech-servicos-cadastro/demotech-servicos-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
     LoginComponent,
     ActiveDirectoryComponent,
     ActiveDirectoryCadastroComponent,
-    ActiveDirectoryUpdateComponent
+    ActiveDirectoryUpdateComponent,
+    DemotechServicosComponent,
+    DemotechServicosCadastroComponent
   ],
   imports: [
     BrowserModule,
