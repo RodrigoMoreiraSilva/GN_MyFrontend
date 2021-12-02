@@ -23,9 +23,9 @@ export class DemotechServicosUpdateComponent implements OnInit {
     })
   }
 
-  AlterarDemotechServico(){
+  AlterarDemotechServico(): void {
     this.demotechService.updateFileDemotech(this.file, this.demotechServico).subscribe(() => {
-      this.demotechService.ExibirMensagem("Upload Demotech realizado")
+      this.demotechService.ExibirMensagem("Edição Demotech realizada")
     })
     this.router.navigate(['/demotech_servicos']);
   }

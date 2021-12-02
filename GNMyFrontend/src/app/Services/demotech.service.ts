@@ -48,7 +48,9 @@ export class DemotechService {
   updateFileDemotech(file: File, demotech_Servico: DemotechServico): Observable<any>{
     const formData = new FormData();
 
-    formData.append('file', file, file.name);
+    if(file != null)
+      formData.append('file', file, file.name);
+    
     formData.append('demotech_Servico', JSON.stringify(demotech_Servico));
 
     return this.http.put(this.baseUrl + "/api/Demotech_Servico/" + demotech_Servico.id, formData, this.httpHeader);
