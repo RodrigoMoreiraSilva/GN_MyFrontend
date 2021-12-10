@@ -16,6 +16,7 @@ import { UploadFileComponent } from './components/upload-file/upload-file.compon
 import { DemotechServicosComponent } from './components/Gestao/demotech-servicos/demotech-servicos.component';
 import { DemotechServicosCadastroComponent } from './components/Gestao/demotech-servicos-cadastro/demotech-servicos-cadastro.component';
 import { DemotechServicosUpdateComponent } from './components/Gestao/demotech-servicos-update/demotech-servicos-update.component';
+import { AcessoBIComponent } from './components/acesso-bi/acesso-bi.component';
 
 
 const routes: Routes = [
@@ -78,6 +79,10 @@ const routes: Routes = [
   {
     path: "demotech_servicos/editar/:id",
     component: DemotechServicosUpdateComponent
+  },
+  {
+    path: "AcessarBI",
+    component: AcessoBIComponent
   }
 ];
 
