@@ -21,13 +21,9 @@ i {
   left: 43%;
 }
 
-.consultoria {
-  padding-top: 10px;
-}
-
 mat-card {
   padding: 9px;
-  padding-top: 5px;
+  padding-top: 3px;
   padding-bottom: 4px;
   text-align: center;
   height: 90px;

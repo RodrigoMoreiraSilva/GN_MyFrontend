@@ -27,6 +27,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon'
 import { UsuariosUpdateComponent } from './components/Gestao/usuarios-update/usuarios-update.component';
 import { RegrasCadastroComponent } from './components/Gestao/regras-cadastro/regras-cadastro.component';
 import { RegrasUpdateComponent } from './components/Gestao/regras-update/regras-update.component'
@@ -84,7 +85,8 @@ import { DemotechTableComponent } from './components/demotech-table/demotech-tab
     MatTableModule,
     MatSelectModule,
     MatPaginatorModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
