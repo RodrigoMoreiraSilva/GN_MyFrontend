@@ -24,7 +24,7 @@ export class DemotechTableComponent implements OnInit {
   constructor(private router: Router, private demotechService: DemotechService) { }
   
   ngOnInit(): void {
-    this.demotechService.Read().subscribe( x => {
+    this.demotechService.Read(true, true).subscribe( x => {
       this.demotechServicos = x;
       this.demotechServicos1! = x.filter(x => x.categoria == "Diagnóstico e consultoria Especializada") 
       this.demotechServicos2! = x.filter(x => x.categoria == "Implementação")
@@ -35,15 +35,17 @@ export class DemotechTableComponent implements OnInit {
       this.demotechServicos7! = x.filter(x => x.categoria == "Gestão Médica")
       this.demotechServicos8! = x.filter(x => x.categoria == "Soluções Empresariais")
     })
-
   }
 
   alerta(){
     alert("Teste!!!")
   }
 
-  NavigateToCadastro(): void {
+  NavigateToEdit(id: string): void {
+    this.router.navigate(['demotech_servicos/editar/' + id])
+  }
 
+  NavigateToCadastro(): void {
     this.router.navigate(['demotech_servicos/cadastro'])
   }
 

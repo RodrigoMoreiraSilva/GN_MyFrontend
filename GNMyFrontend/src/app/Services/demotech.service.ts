@@ -28,8 +28,8 @@ export class DemotechService {
     })
   }
 
-  Read(): Observable<DemotechServico[]> {
-    return this.http.get<DemotechServico[]>(this.baseUrl + "/api/Demotech_Servico", this.httpHeader)
+  Read(useFilter: boolean, isActive: boolean): Observable<DemotechServico[]> {
+    return this.http.get<DemotechServico[]>(this.baseUrl + "/api/Demotech_Servico/" + useFilter + "/" + isActive, this.httpHeader)
   }
 
   ReadById(id: string): Observable<DemotechServico> {
