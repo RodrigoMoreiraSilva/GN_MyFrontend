@@ -1,0 +1,136 @@
+<div class="row">
+    <div class="container">
+      <div class="col-sm-6">
+        <div>
+          <h2 style="text-align: center; bottom: 5%;">Corretagem</h2>
+          <hr style="height: 12px; margin-top: -2%; background-color: #FF4E33; border: 0; opacity: inherit;">
+        </div>
+        <div style="margin-top: -2%;">
+          <table class="table corretagem" >
+            <thead>
+              <tr>
+                <th scope="col">
+                  Diagnóstico e consultoria
+                </th>
+                <th scope="col">
+                  Implementação
+                </th>
+                <th scope="col">
+                  HR Delivery
+                </th>
+                <th scope="col">
+                  Relacionamento com o cliente
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="col">
+                  <mat-card class="mat-elevation-z8" *ngFor="let item of demotechServicos1" (click)="alerta()">
+                    {{item.id}} {{item.descricao}}
+                    <br>
+                    <i class="fas fa-file-pdf" style="font-size: 20px;"></i>
+                  </mat-card>
+                  <button mat-raised-button (click) = "NavigateToCadastro()"  color="primary">
+                    Novo Serviço
+                </button>
+                </td>
+                <td scope="col">
+                  <mat-card class="mat-elevation-z8" *ngFor="let item of demotechServicos2">
+                    {{item.id}} {{item.descricao}}
+                    <br>
+                    <i class="far fa-file-image" style="font-size: 20px;"></i>
+                  </mat-card>
+                  
+                </td>
+                <td scope="col">
+                  <mat-card class="mat-elevation-z8" *ngFor="let item of demotechServicos3">
+                    {{item.id}} {{item.descricao}}
+                    <br>
+                    <i class="far fa-file-image" style="font-size: 20px;"></i>
+                  </mat-card>
+                </td>
+                <td scope="col">
+                  <mat-card class="mat-elevation-z8" *ngFor="let item of demotechServicos4">
+                    {{item.id}} {{item.descricao}}
+                    <br>
+                    <i class="far fa-file-image" style="font-size: 20px;"></i>
+                  </mat-card>
+                </td>
+                <!-- Inicio -->
+
+              
+
+                <!-- FIM -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div>
+          <h2 style="text-align: center; bottom: 5%;">Consultoria</h2>
+          <hr style="height: 12px; margin-top: -2%; background-color: #0C42F9; border: 0; opacity: inherit;">
+        </div>
+        <div style="margin-top: -2%;">
+          <table class="table consultoria">
+            <thead>
+              <tr>
+                <th scope="col">
+                  Tecnologia
+                </th>
+                <th scope="col">
+                  Gestão de saúde integrada
+                </th>
+                <th scope="col">
+                  Gestão Médica
+                </th>
+                <th scope="col">
+                  Soluções Empresariais
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="col">
+                  <mat-card class="mat-elevation-z8" *ngFor="let item of demotechServicos5">
+                    {{item.descricao}}
+                    <br>
+                    <i class="fas fa-file-pdf" style="font-size: 20px;"></i>
+                  </mat-card>
+                </td>
+                <td scope="col">
+                  <mat-card class="mat-elevation-z8" *ngFor="let item of demotechServicos6">
+                    {{item.descricao}}
+                    <br>
+                    <i class="far fa-file-image" style="font-size: 20px;"></i>
+                  </mat-card>
+                </td>
+                <td scope="col">
+                  <mat-card class="mat-elevation-z8" *ngFor="let item of demotechServicos7">
+                    {{item.descricao}}
+                    <br>
+                    <i class="far fa-file-image" style="font-size: 20px;"></i>
+                  </mat-card>
+                </td>
+                <td scope="col">
+                  <mat-card class="mat-elevation-z8" *ngFor="let item of demotechServicos8">
+                    {{item.descricao}}
+                    <br>
+                    <i class="far fa-file-image" style="font-size: 20px;"></i>
+                  </mat-card>
+                </td>
+              </tr>
+
+              <!-- Inicio -->
+
+             
+
+                <!-- FIM -->
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

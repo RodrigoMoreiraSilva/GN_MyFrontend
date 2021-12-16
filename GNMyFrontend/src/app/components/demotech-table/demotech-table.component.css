@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+}
+
+table tr, th, td {
+  border: none !important;
+  word-wrap: break-word;
+  width: 134px;
+  height: 6vw;
+  text-align: center;
+  vertical-align: middle !important;
+}
+
+tbody {
+  border: none !important;
+}
+
+i {
+  position: absolute;
+  bottom: 5%;
+  left: 43%;
+}
+
+.consultoria {
+  padding-top: 10px;
+}
+
+mat-card {
+  padding: 9px;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  text-align: center;
+  height: 90px;
+  width: 134px;
+  word-wrap: break-word;
+  vertical-align: middle !important;
+  border-radius: 20px !important;
+  margin: 2px 1px 5px 1px;
+  position: relative;
+}
