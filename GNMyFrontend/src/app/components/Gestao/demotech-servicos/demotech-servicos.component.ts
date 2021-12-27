@@ -24,7 +24,7 @@ export class DemotechServicosComponent implements AfterViewInit, OnInit {
                     ,'isActive'
                     ,'Edidar'];
 
-  @ViewChild(MatPaginator) private paginator: MatPaginator;
+  @ViewChild(MatPaginator) private paginator!: MatPaginator;
 
   constructor(private router: Router, private demotechService: DemotechService) { }
   
