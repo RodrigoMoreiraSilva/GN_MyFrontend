@@ -29,11 +29,11 @@ export class DemotechService {
   }
 
   Read(useFilter: boolean, isActive: boolean): Observable<DemotechServico[]> {
-    return this.http.get<DemotechServico[]>(this.baseUrl + "/api/Demotech_Servico/" + useFilter + "/" + isActive, this.httpHeader)
+    return this.http.get<DemotechServico[]>(this.baseUrl + "/api/DemotechServico/" + useFilter + "/" + isActive, this.httpHeader)
   }
 
   ReadById(id: string): Observable<DemotechServico> {
-    return this.http.get<DemotechServico>(this.baseUrl + "/api/Demotech_Servico/" + id, this.httpHeader)
+    return this.http.get<DemotechServico>(this.baseUrl + "/api/DemotechServico/" + id, this.httpHeader)
   }
 
   uploadFileDemotech(file: File, demotech_Servico: DemotechServico): Observable<any>{
@@ -43,7 +43,7 @@ export class DemotechService {
       formData.append('file', file, file.name);
     formData.append('demotech_Servico', JSON.stringify(demotech_Servico));
 
-    return this.http.post(this.baseUrl + "/api/Demotech_Servico", formData, this.httpHeader);
+    return this.http.post(this.baseUrl + "/api/DemotechServico", formData, this.httpHeader);
   }
 
   updateFileDemotech(file: File, demotech_Servico: DemotechServico): Observable<any>{
@@ -54,7 +54,7 @@ export class DemotechService {
     
     formData.append('demotech_Servico', JSON.stringify(demotech_Servico));
 
-    return this.http.put(this.baseUrl + "/api/Demotech_Servico/" + demotech_Servico.id, formData, this.httpHeader);
+    return this.http.put(this.baseUrl + "/api/DemotechServico/" + demotech_Servico.id, formData, this.httpHeader);
   }
 
 }

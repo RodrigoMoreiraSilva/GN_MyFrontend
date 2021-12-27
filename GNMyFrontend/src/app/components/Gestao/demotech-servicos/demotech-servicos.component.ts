@@ -33,7 +33,7 @@ export class DemotechServicosComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {
-    this.demotechService.Read(true, true).subscribe( x => {
+    this.demotechService.Read(false, true).subscribe( x => {
       this.demotechServicos.data = x;
     })
   }

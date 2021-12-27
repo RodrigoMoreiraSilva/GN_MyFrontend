@@ -42,7 +42,6 @@ import { DemotechServicosComponent } from './components/Gestao/demotech-servicos
 import { DemotechServicosCadastroComponent } from './components/Gestao/demotech-servicos-cadastro/demotech-servicos-cadastro.component';
 import { DemotechServicosUpdateComponent } from './components/Gestao/demotech-servicos-update/demotech-servicos-update.component';
 import { AcessoBIComponent } from './components/acesso-bi/acesso-bi.component';
-import { DemotechTableComponent } from './components/demotech-table/demotech-table.component';
 
 @NgModule({
   declarations: [
@@ -64,8 +63,7 @@ import { DemotechTableComponent } from './components/demotech-table/demotech-tab
     DemotechServicosComponent,
     DemotechServicosCadastroComponent,
     DemotechServicosUpdateComponent,
-    AcessoBIComponent,
-    DemotechTableComponent
+    AcessoBIComponent
   ],
   imports: [
     BrowserModule,
